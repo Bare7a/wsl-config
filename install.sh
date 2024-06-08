@@ -11,25 +11,15 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 mkdir ~/.nvm
 
 # Install Go, NVM, NeoVim and all of it's needed dependencies for NvChad
-brew install go
-brew install fd
-brew install nvm
-brew install gopls
-brew install neovim
-brew install stylua
-brew install ripgrep
-brew install prettier
-brew install shellcheck
-brew install typescript-language-server
-brew install vscode-langservers-extracted
+brew install go fd nvm gopls neovim stylua ripgrep prettier shellcheck typescript-language-server vscode-langservers-extracted
 
 # Configure NVM and Node
 export NVM_DIR="$HOME/.nvm"
   [ -s "$HOMEBREW_PREFIX/opt/nvm/nvm.sh" ] && \. "$HOMEBREW_PREFIX/opt/nvm/nvm.sh"
   [ -s "$HOMEBREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm" ] && \. "$HOMEBREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm"
 
-nvm install 18.16.0
-nvm use 18.16.0
+nvm install lts/*
+nvm use lts/*
 
 # Install ZSH
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended --keep-zshrc
@@ -38,13 +28,13 @@ git clone https://github.com/zsh-users/zsh-autosuggestions.git ~/.oh-my-zsh/cust
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 
 # Install NvChad
-git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
+git clone https://github.com/Bare7a/NvChad ~/.config/nvim --depth 1
 
+# Add default configs for zshrc and p10k
 export WIN_HOME_FOLDER="$(wslpath "$(wslvar USERPROFILE)")/home/."
 cp -r $WIN_HOME_FOLDER ~/
 chmod 644 ~/.zshrc
 chmod 777 ~/.p10k.zsh
-chmod 777 ~/.config/nvim/lua/custom
 
 # Add the needed SSH keys and start the SSH Agent
 export WIN_SSH_FOLDER="$(wslpath "$(wslvar USERPROFILE)")/.ssh"

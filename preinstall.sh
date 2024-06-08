@@ -1,3 +1,5 @@
+sudo chattr -a -i /etc/resolv.conf
+
 sudo rm /etc/resolv.conf
 sudo bash -c 'echo "[network]" > /etc/resolv.conf'
 sudo bash -c 'echo "nameserver 8.8.8.8" >> /etc/resolv.conf'
