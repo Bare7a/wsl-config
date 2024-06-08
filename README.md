@@ -1,7 +1,7 @@
 Clone the repo inside the home directory in `wsl`
 
 ```SH
-git clone git@github.com:Bare7a/wsl-config.git ~/wsl
+git clone https://github.com/Bare7a/wsl-config.git ~/wsl
 ```
 
 Mark the `install.sh` and `preinstall.sh` scritps are executable
