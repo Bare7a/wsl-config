@@ -14,11 +14,11 @@ chmod +x ~/wsl/preinstall.sh
 Apply DNS fix before running the actual script
 
 ```SH
-sudo ~/wsl/preinstall.sh
+~/wsl/preinstall.sh
 ```
 
 Restart WSL and run the following script to install, update and configure the system and apps
 
 ```SH
-sudo ~/wsl/install.sh
+~/wsl/install.sh
 ```
