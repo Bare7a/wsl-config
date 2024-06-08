@@ -11,7 +11,7 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 mkdir ~/.nvm
 
 # Install Go, NVM, NeoVim and all of it's needed dependencies for NvChad
-brew install go fd nvm gopls neovim stylua ripgrep prettier shellcheck typescript-language-server vscode-langservers-extracted
+brew install go fd nvm gopls neovim stylua lua-language-server ripgrep prettier shellcheck typescript-language-server vscode-langservers-extracted
 
 # Configure NVM and Node
 export NVM_DIR="$HOME/.nvm"
